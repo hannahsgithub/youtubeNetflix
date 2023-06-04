@@ -1,0 +1,42 @@
+.root {
+  position: absolute;
+  left: 4766px;
+  top: 1936px;
+  width: 120px;
+  height: 45.1485px;
+  align-items: flex-start;
+}
+.rectangle6 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.polygon1 {
+  position: absolute;
+  left: 14.1667%;
+  right: 62.071%;
+  top: 19.9342%;
+  bottom: 16.9079%;
+  overflow: visible;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
+.watch {
+  color: #200505;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 42.2437%;
+  right: 14.423%;
+  top: 34.7573%;
+  bottom: 29.8042%;
+  flex-direction: column;
+}

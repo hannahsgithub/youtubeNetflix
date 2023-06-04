@@ -1,0 +1,109 @@
+.youtubeLogo.youtubeLogo {
+  left: 40px;
+  top: 35px;
+  width: 140px;
+  height: 31.1111px;
+}
+.group.group {
+  width: 139.3594px;
+  height: 31.1111px;
+}
+.group {
+  width: 139.3594px;
+  height: 31.1111px;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
+.playButton.playButton {
+  left: 65px;
+  top: 332px;
+}
+.root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  background-color: #000;
+  overflow: hidden;
+}
+.searchBar {
+  position: absolute;
+  left: 840px;
+  top: 28px;
+  width: 573px;
+  height: min-content;
+}
+.searchBarContent {
+  position: relative;
+  width: 545.8609px;
+  height: 45px;
+}
+.search {
+  color: #aaa;
+  font-size: 22px;
+  line-height: 45px;
+  font-family: Jaldi, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 2.5648%;
+  right: 83.3291%;
+  top: 0;
+  bottom: 0;
+  width: 77px;
+  height: min-content;
+  flex-direction: column;
+}
+.oval {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 6.4431%;
+  bottom: 6.4434%;
+  width: 545.8609px;
+  height: 39.201px;
+  outline: solid 1px #d3d3d3;
+  outline-offset: -1px;
+  border-radius: 19.6005px;
+}
+._subtitle {
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 65px;
+  top: 282px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.title {
+  position: absolute;
+  left: 65px;
+  top: 164px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.textBlock {
+  color: #fff;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 600;
+  font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock2 {
+  margin-top: 0;
+  color: #fff;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 600;
+  font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}

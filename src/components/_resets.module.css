@@ -1,0 +1,36 @@
+.programResets,
+.programResets * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.programResets,
+.programResets :not(span, a, ul, ol, li, p) {
+  display: flex;
+}
+
+.programResets ul,
+.programResets ol {
+  text-indent: 0;
+  padding-inline-start: 1.5em;
+}
+
+.programResets p:empty::before {
+  content: '';
+  display: inline-block;
+}
+
+.programResets img {
+  object-fit: contain;
+}
+
+.programResets svg {
+  overflow: visible;
+}
