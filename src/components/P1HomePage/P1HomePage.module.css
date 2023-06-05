@@ -181,3 +181,24 @@
   font-size: 16px;
   margin-top: 10px;
 }
+
+.carouselVideo:hover .videoTitle {
+  /* Add scrolling effect when hovering */
+  animation: scrollTitle 10s linear infinite;
+}
+
+@keyframes scrollTitle {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scrollTitle {
+  animation: scrollTitle 10s linear infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: marquee;
+}

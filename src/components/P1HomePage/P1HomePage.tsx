@@ -28,7 +28,7 @@ export const P1HomePage: FC<Props> = memo(function P1HomePage(props = {}) {
     const fetchVideos = async () => {
       try {
         const response = await axios.get(
-          `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=l-wUKu_V2Lk,l96IgQmXmhM,GPitD0-mkYA,MokxwHbscQ8,vUyC3ohm1pI&key=AIzaSyC5AoCQ8G9bTkFYFg5ukfINjZg1s9EgUqY`
+          `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=l-wUKu_V2Lk,l96IgQmXmhM,GPitD0-mkYA,MokxwHbscQ8,vUyC3ohm1pI,My58IZsDVbM,XGayDJEqbQA,Etv-L2JKCWk&key=AIzaSyC5AoCQ8G9bTkFYFg5ukfINjZg1s9EgUqY`
         );
         const videoData = response.data.items;
 
@@ -51,7 +51,7 @@ export const P1HomePage: FC<Props> = memo(function P1HomePage(props = {}) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShrinkTitle(true);
-    }, 4000);
+    }, 3000);
 
     return () => clearTimeout(timeout);
   }, []);
