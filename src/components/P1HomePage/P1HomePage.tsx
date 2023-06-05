@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { memo } from 'react';
 import type { FC } from 'react';
+import axios from 'axios';
 
 import resets from '../_resets.module.css';
 import { GroupIcon } from './GroupIcon';
@@ -12,8 +13,40 @@ interface Props {
   className?: string;
 }
 
+interface Video {
+  title: string;
+  thumbnailUrl: string;
+  videoUrl: string;
+  videoId?: string; // Add videoId property
+}
+
 export const P1HomePage: FC<Props> = memo(function P1HomePage(props = {}) {
   const [shrinkTitle, setShrinkTitle] = useState(false);
+  const [videos, setVideos] = useState<Video[]>([]); // Update the videos state
+
+  useEffect(() => {
+    const fetchVideos = async () => {
+      try {
+        const response = await axios.get(
+          `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=l-wUKu_V2Lk,l96IgQmXmhM,GPitD0-mkYA,MokxwHbscQ8,vUyC3ohm1pI&key=AIzaSyC5AoCQ8G9bTkFYFg5ukfINjZg1s9EgUqY`
+        );
+        const videoData = response.data.items;
+
+        const fetchedVideos = videoData.map((item: any) => ({
+          title: item.snippet.title,
+          thumbnailUrl: item.snippet.thumbnails.maxres.url,
+          videoUrl: `https://www.youtube.com/watch?v=${item.id}`,
+          videoId: item.id, // Set the videoId property
+        }));
+
+        setVideos(fetchedVideos);
+      } catch (error) {
+        console.error('Error fetching videos:', error);
+      }
+    };
+
+    fetchVideos();
+  }, []);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -33,6 +66,20 @@ export const P1HomePage: FC<Props> = memo(function P1HomePage(props = {}) {
           allow="autoplay; encrypted-media"
           allowFullScreen
         ></iframe>
+      </div>
+      <div className={classes.carousel}>
+        <div className={classes.carouselVideos}>
+          {videos.map((video, index) => (
+            <div className={classes.carouselVideo} key={index}>
+              <a href={video.videoUrl} target="_blank" rel="noopener noreferrer">
+                <img src={video.thumbnailUrl} alt={video.title} className={classes.videoThumbnail} />
+              </a>
+              <div className={classes.videoTitleWrapper}>
+                <div className={classes.videoTitle}>{video.title}</div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
       <div className={classes.searchBar}>
         <div className={classes.searchBarContent}>
